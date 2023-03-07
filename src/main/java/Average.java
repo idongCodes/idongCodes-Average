@@ -18,6 +18,21 @@ public class Average {
      * @return the average of all the values of nums.
      */
     public double getAvg(int[] nums){
-        return 0;
+        // This will hold sum of elements in nums array
+        double sum = 0;
+
+        // Convert array elements from int to double
+        for (int num : nums) {
+            double toDouble = (double) num;
+            
+            // As they're being converted to double types we can add elements to sum variable to get total sum
+            sum += toDouble;
+        }
+
+        // Divide sum by total number of elements
+        double getAvg = sum / nums.length;
+
+        // Return average
+        return getAvg;
     }
 }
